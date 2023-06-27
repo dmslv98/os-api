@@ -40,7 +40,7 @@ public class OS {
 	
 	@ManyToOne  //muitas OS para o mesmo cliente
 	@JoinColumn(name = "cliente_id")  //nome da coluna cliente na tabela de OS
-	private Tecnico cliente;
+	private Cliente cliente;
 	
 	//contrutor da super class (sem os parametros)
 	public OS() {
@@ -54,7 +54,7 @@ public class OS {
 	//public OS(Integer id, LocalDateTime dataAbertura, LocalDateTime dataFechamento, Prioridade prioridade,
 	//		String observacoes, Status status, Tecnico tecnico, Tecnico cliente) {
 	public OS(Integer id, Prioridade prioridade,
-			String observacoes, Status status, Tecnico tecnico, Tecnico cliente) {	
+			String observacoes, Status status, Tecnico tecnico, Cliente cliente) {	
 		super();
 		this.id = id;
 		//this.dataAbertura = dataAbertura;
@@ -131,11 +131,11 @@ public class OS {
 		this.tecnico = tecnico;
 	}
 
-	public Tecnico getCliente() {
+	public Cliente getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Tecnico cliente) {
+	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
 

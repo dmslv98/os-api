@@ -64,9 +64,9 @@ public class OsService {
 		Cliente cli = clienteService.findById(obj.getCliente()); //id do Cliente
 		
 		newObj.setTecnico(tec);
-		newObj.setCliente(tec);
+		newObj.setCliente(cli);
 		
-		//verifica se o status é de fechamento e seta a data de fechamento.
+		//verifica se o status é de fechamento e setar a data de fechamento.
 		if (newObj.getStatus().getCod().equals(2)) {
 			newObj.setDataFechamento(LocalDateTime.now());			
 		}
